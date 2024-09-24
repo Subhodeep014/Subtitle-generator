@@ -174,7 +174,7 @@ const Home = () => {
             disabled={!file || uploading} 
             className="w-full"
           >
-            {uploading ? <><Loader2/> Generating subtitle</> : 'Upload and Generate Subtitles'}
+            {uploading ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating subtitle</> : 'Upload and Generate Subtitles'}
           </Button>
         </CardFooter>
       </Card>
