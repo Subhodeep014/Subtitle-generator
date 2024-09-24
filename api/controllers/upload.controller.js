@@ -50,7 +50,7 @@ export const uploadVideo = async (req, res, next) => {
       // Start Transcription Job
       const transcriptionParams = {
         TranscriptionJobName: `Transcription-${Date.now()}`,
-        LanguageCode: 'en-US', // or other language code
+        LanguageCode: 'en-US', // language options for extending the project if required
         Media: {
           MediaFileUri: `https://${process.env.S3_BUCKET_NAME}.s3.amazonaws.com/${file.filename}`,
         },

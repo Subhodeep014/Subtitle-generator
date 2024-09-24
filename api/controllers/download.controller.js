@@ -73,10 +73,9 @@ export const downloadTranscribeFile = async (req, res) => {
       // Send the SRT content as a downloadable file
       res.setHeader('Content-Disposition', `attachment; filename="${srtFileName}"`);
       res.setHeader('Content-Type', 'text/srt');
-      return res.send(srtContent); // This ends the request and sends the file content
+      return res.send(srtContent); 
 
     } else {
-      // If transcription is not completed, return the current status
       return res.status(200).json({ status });
     }
 
