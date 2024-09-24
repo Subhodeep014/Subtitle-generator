@@ -33,7 +33,7 @@ const Home = () => {
         body: formData,
       });
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
 
       if (response.ok) {
         setUploading(false);
@@ -58,7 +58,7 @@ const Home = () => {
   
         // Get and log the content type for debugging
         const contentType = response.headers.get('Content-Type');
-        console.log('Content-Type:', contentType);
+        // console.log('Content-Type:', contentType);
   
         // Check if contentType contains 'text/srt' or 'application/json'
         if (contentType.includes('text/srt')) {
